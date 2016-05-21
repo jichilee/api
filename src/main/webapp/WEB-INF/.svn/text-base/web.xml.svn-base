@@ -1,0 +1,65 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<web-app id="WebApp_ID" version="2.4" xmlns="http://java.sun.com/xml/ns/j2ee" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://java.sun.com/xml/ns/j2ee http://java.sun.com/xml/ns/j2ee/web-app_2_4.xsd">
+	<display-name>APITools</display-name>
+	<servlet>
+		<servlet-name>getData</servlet-name>
+		<servlet-class>com.youku.web.servlet.CommonHttpServlet</servlet-class>
+	</servlet>
+	<servlet>
+		<servlet-name>getResult</servlet-name>
+		<servlet-class>com.youku.web.servlet.CommonHttpServlet2</servlet-class>
+	</servlet>
+	<servlet>
+		<servlet-name>DownloadMinuteFileServlet</servlet-name>
+		<servlet-class>com.youku.web.servlet.DownloadMinuteFileServlet</servlet-class>
+	</servlet>
+	<servlet>
+		<servlet-name>DownloadDailyFileServlet</servlet-name>
+		<servlet-class>com.youku.web.servlet.DownloadDailyFileServlet</servlet-class>
+	</servlet>
+	<servlet>
+		<servlet-name>DownloadShowTrendFileServlet</servlet-name>
+		<servlet-class>com.youku.web.servlet.DownloadShowTrendFileServlet</servlet-class>
+	</servlet>
+	<servlet>
+		<description>init program group info</description>
+		<display-name>init program group info</display-name>
+		<servlet-name>InitProGroupInfo</servlet-name>
+		<servlet-class>com.youku.web.servlet.InitProGroupInfo</servlet-class>
+		<load-on-startup>1</load-on-startup>
+	</servlet>
+
+	<servlet-mapping>
+		<servlet-name>getData</servlet-name>
+		<url-pattern>/getData</url-pattern>
+	</servlet-mapping>
+	<servlet-mapping>
+		<servlet-name>getResult</servlet-name>
+		<url-pattern>/getResult</url-pattern>
+	</servlet-mapping>
+	<servlet-mapping>
+		<servlet-name>DownloadMinuteFileServlet</servlet-name>
+		<url-pattern>/downloadMinuteFile</url-pattern>
+	</servlet-mapping>
+	<servlet-mapping>
+		<servlet-name>DownloadDailyFileServlet</servlet-name>
+		<url-pattern>/downloadDailyFile</url-pattern>
+	</servlet-mapping>
+	<servlet-mapping>
+		<servlet-name>DownloadShowTrendFileServlet</servlet-name>
+		<url-pattern>/downloadShowTrendFile</url-pattern>
+	</servlet-mapping>
+	<servlet-mapping>
+		<servlet-name>InitProGroupInfo</servlet-name>
+		<url-pattern>/InitProGroupInfo</url-pattern>
+	</servlet-mapping>
+
+    <listener>
+        <listener-class>
+            com.youku.web.listener.ContextStartupListener
+        </listener-class>
+    </listener>
+	<welcome-file-list>
+		<welcome-file>index.jsp</welcome-file>
+	</welcome-file-list>
+</web-app>

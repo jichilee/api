@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<config>
+    <interface name="getElasticSearchController" num="600023" class="com.youku.bgmovie.radar.service.ElasticSearchController" memcacheprefix="0" contenttype="json">
+        <params>
+        	<!-- 二选一  -->
+            <param name="showName"  type="string"></param>
+            <param name="showId"  type="string"></param>
+            <param name="cache"  type="string"></param>
+        </params>
+    </interface>
+    <interface name="getPhoenixController" num="600024" class="com.youku.bgmovie.radar.service.PhoenixController" memcacheprefix="0" contenttype="json">
+        <params>
+            <param name="sql"  type="string"></param>
+            <param name="cache"  type="string"></param>
+        </params>
+    </interface>
+
+</config>
